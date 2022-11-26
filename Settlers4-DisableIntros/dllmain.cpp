@@ -2,9 +2,21 @@
 
 DWORD& playLogoVideos = *(DWORD*)0x007B8E28;
 
+bool GameStateHandlerInit();
+HOOK Ivk_GameStateHandlerInit AS(0x004EADF0, GameStateHandlerInit);
+bool GameStateHandlerInit()
+{
+	Ivk_GameStateHandlerInit.Detach();
+
+	// disable intro movies playing
+	playLogoVideos = FALSE;
+	bool result = Ivk_GameStateHandlerInit();
+
+	return result;
+}
+
 VOID WINAPI onDllAttach(HMODULE hModule)
 {
-	playLogoVideos = FALSE;
 }
 
 VOID WINAPI onDllDetach()
