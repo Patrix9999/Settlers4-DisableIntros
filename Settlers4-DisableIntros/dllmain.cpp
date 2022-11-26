@@ -8,9 +8,10 @@ bool GameStateHandlerInit()
 {
 	Ivk_GameStateHandlerInit.Detach();
 
-	// disable movies playing
+	// disable intro movies playing
 	playVideos = FALSE;
 	bool result = Ivk_GameStateHandlerInit();
+	playVideos = TRUE;
 
 	return result;
 }
