@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-DWORD& playLogoVideos = *(DWORD*)0x007B8E28;
+DWORD& playVideos = *(DWORD*)0x007B8E28;
 
 bool GameStateHandlerInit();
 HOOK Ivk_GameStateHandlerInit AS(0x004EADF0, GameStateHandlerInit);
@@ -8,8 +8,8 @@ bool GameStateHandlerInit()
 {
 	Ivk_GameStateHandlerInit.Detach();
 
-	// disable intro movies playing
-	playLogoVideos = FALSE;
+	// disable movies playing
+	playVideos = FALSE;
 	bool result = Ivk_GameStateHandlerInit();
 
 	return result;
