@@ -17,7 +17,7 @@ To uninstall the mod remove `DisableIntros.asi` from your`plugins` directory.
 
 # Contribute
 
-The official repository of this project is available at: https://github.com/Patrix9999/Settlers4_DisableIntros.
+The official repository of this project is available at: https://github.com/Patrix9999/Settlers4-DisableIntros.
 
 Compile it yourself
 Download Visual Studio 2017 or 2019 with the C++ toolchain. The project is configured to build it with the Windows 10 compatible v143 toolchain. However, you should be able to change the toolchain to whatever you like. No additional libraries are required so it should compile out of the box.
